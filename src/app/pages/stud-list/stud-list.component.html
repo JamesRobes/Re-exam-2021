@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-12">
+        <button class="btn btn-primary float-end" (click)="linkToItem()">Новый</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Имя</th>
+                    <th scope="col">Фамилия</th>
+                    <th scope="col">Отчество</th>
+                    <th scope="col">Дата рождения</th>
+                    <th scope="col">Телефон</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Группа</th>
+                    <th scope="col">Направление</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let personal of personals" (click)="linkToItem(personal.id)">
+                    <td>{{personal.id}}</td>
+                    <td>{{personal.name}}</td>
+                    <td>{{personal.surname}}</td>
+                    <td>{{personal.patronymic[0].toUpperCase()}}</td>
+                    <td>{{personal.birthday}}</td>
+                    <td>{{personal.number}}</td>
+                    <td>{{personal.email}}</td>
+                    <td>{{personal.group}}</td>
+                    <td>{{personal.direction}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "personal": [
+    {
+      "name": "q",
+      "surname": "q",
+      "patronymic": "q",
+      "birthday": "qq",
+      "number": "q",
+      "email": "q",
+      "group": "q",
+      "direction": "q",
+      "id": 1
+    },
+    {
+      "name": "e",
+      "surname": "e",
+      "patronymic": "e",
+      "birthday": "e",
+      "number": "e",
+      "email": "e",
+      "group": "ee",
+      "direction": "e",
+      "id": 2
+    }
+  ]
+}

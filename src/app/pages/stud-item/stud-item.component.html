@@ -1,0 +1,186 @@
+<form [formGroup]="studForm" (ngSubmit)="(save())">
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div class="form-group">
+                <label for="name">Имя</label>
+                <input
+                formControlName='name'
+                type="text"
+                class="form-control" 
+                id="name"
+                placeholder="Имя"
+                [ngClass]="{
+                    'has-error':
+                    studForm.get('name')!.invalid &&
+                    studForm.get('name')!.touched
+                    }"
+                />
+                <small class="form-text text-muted"
+                            >Обязатаельное поле до 100 символов</small>
+            </div>
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-12 mt-3">
+            <div class="form-group">
+                <label for="surname">Фамилия</label>
+                <input
+                formControlName='surname'
+                type="text"
+                class="form-control"
+                id="surname"
+                placeholder="Фамилия"
+                [ngClass]="{
+                    'has-error':
+                    studForm.get('surname')?.invalid &&
+                    studForm.get('surname')?.touched
+                    }"
+                />
+                <small class="form-text text-muted"
+                            >Обязатаельное поле до 100 символов</small>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div class="form-group">
+                <label for="patronymic">Отчество</label>
+                <input
+                formControlName='patronymic'
+                type="text"
+                class="form-control"
+                id="patronymic"
+                placeholder="Отчество"
+                [ngClass]="{
+                    'has-error':
+                    studForm.get('patronymic')?.invalid &&
+                    studForm.get('patronymic')?.touched
+                    }"
+                />
+                <small class="form-text text-muted"
+                            >Обязатаельное поле до 100 символов</small>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div class="form-group">
+                <label for="birthday">Дата рождения</label>
+                <input
+                formControlName='birthday'
+                type="text"
+                class="form-control"
+                id="birthday"
+                placeholder="Дата рождения"
+                [ngClass]="{
+                    'has-error':
+                    studForm.get('birthday')?.invalid &&
+                    studForm.get('birthday')?.touched
+                    }"
+                />
+
+                <small class="form-text text-muted"
+                            >Обязатаельное поле до 100 символов</small>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div class="form-group">
+                <label for="number">Телефон</label>
+                <input
+                formControlName='number'
+                type="text"
+                class="form-control"
+                id="number"
+                placeholder="Телефон"
+                [ngClass]="{
+                    'has-error':
+                    studForm.get('number')?.invalid &&
+                    studForm.get('number')?.touched
+                    }"
+                />
+
+                <small class="form-text text-muted"
+                            >Обязатаельное поле до 100 символов</small>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                formControlName='email'
+                type="text"
+                class="form-control"
+                id="email"
+                placeholder="email"
+                [ngClass]="{
+                    'has-error':
+                    studForm.get('email')?.invalid &&
+                    studForm.get('email')?.touched
+                    }"
+                />
+
+                <small class="form-text text-muted"
+                            >Обязатаельное поле до 100 символов</small>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div class="form-group">
+                <label for="group">Группа</label>
+                <input
+                formControlName='group'
+                type="group"
+                class="form-control"
+                id="group"
+                placeholder="Группа"
+                [ngClass]="{
+                    'has-error':
+                    studForm.get('group')?.invalid &&
+                    studForm.get('group')?.touched
+                    }"
+                />
+
+                <small class="form-text text-muted"
+                            >Обязатаельное поле до 100 символов</small>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div class="form-group">
+                <label for="direction">Направление</label>
+                <input
+                formControlName='direction'
+                type="text"
+                class="form-control"
+                id="direction"
+                placeholder="Направление"
+                [ngClass]="{
+                    'has-error':
+                    studForm.get('direction')?.invalid &&
+                    studForm.get('direction')?.touched
+                    }"
+                />
+
+                <small class="form-text text-muted"
+                            >Обязатаельное поле до 100 символов</small>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <button type="submit" class="btn btn-primary" [disabled]="studForm.invalid">Сохранить</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <button class="btn btn-danger" *ngIf='id' (click)='delete()'>Удалить</button>
+        </div>
+    </div>
+</form>
+
